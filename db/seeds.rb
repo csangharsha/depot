@@ -8,10 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
 Product.delete_all
-Product.create!(title: 'Docker for Rails Developers',
-  description:
+Product.create!(title: "Docker for Rails Developers",
+                description:
     %(<p>
       <em>Build, Ship, and Run Your Applications Everywhere</em> Docker does
       for DevOps what Rails did for web development—it gives you a new set
@@ -23,11 +22,11 @@ Product.create!(title: 'Docker for Rails Developers',
       the way to production as Docker transforms the massive leap of
       deploying your app in the cloud into a baby step.
       </p>),
-  image_url: 'ridocker.jpg',
-  price: 19.95)
+                image_url: "ridocker.jpg",
+                price: 19.95)
 # . . .
-Product.create!(title: 'Design and Build Great Web APIs',
-  description:
+Product.create!(title: "Design and Build Great Web APIs",
+                description:
     %(<p>
       <em>Robust, Reliable, and Resilient</em>
       APIs are transforming the business world at an increasing pace. Gain
@@ -40,12 +39,12 @@ Product.create!(title: 'Design and Build Great Web APIs',
       open-source utilities and common programming patterns you can apply
       right away.
       </p>),
-  image_url: 'maapis.jpg',
-  price: 24.95)
+                image_url: "maapis.jpg",
+                price: 24.95)
 # . . .
 
-Product.create!(title: 'Modern CSS with Tailwind',
-  description:
+Product.create!(title: "Modern CSS with Tailwind",
+                description:
     %(<p>
       <em>Flexible Styling Without the Fuss</em>
       Tailwind CSS is an exciting new CSS framework that allows you to
@@ -57,5 +56,5 @@ Product.create!(title: 'Modern CSS with Tailwind',
       from the smallest detail of your typography to the entire design of
       your site.
       </p>),
-  image_url: 'tailwind.jpg',
-  price: 18.95)
+                image_url: "tailwind.jpg",
+                price: 18.95)

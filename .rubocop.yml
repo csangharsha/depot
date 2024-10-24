@@ -1,8 +1,125 @@
 # Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
-
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-minitest
 # Overwrite or add rules to create your own house style
 #
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - "bin/**/*"
+    - "config/**/*"
+    - "db/schema.rb"
+    - "db/migrate/*"
+    - "node_modules/**/*"
+    - "app/channels/application_cable/**/*"
+    - "vendor/**/*"
+  TargetRubyVersion: 2.6.3
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Style/AndOr:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/BlockNesting:
+  Max: 5
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 35
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Naming/FileName:
+  Enabled: false
+
+Naming/MethodParameterName:
+  AllowedNames:
+    - "_"
+    - "q"
+    - "ip"
+    - "ad"
+    - "to"
+
+# TODO: investigate proper upgrade path and remove
+Lint/UriEscapeUnescape:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+  ConsistentQuotesInMultiline: false
+
+# TODO: investigate proper upgrade path and remove
+Style/DateTime:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/OutputSafety:
+  Enabled: false
+
+Rails/RefuteMethods:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - staging
+    - test
+
+# TODO: investigate proper upgrade path and remove
+Rails/SkipsModelValidations:
+  Enabled: false
+
+# TODO: investigate proper upgrade path and remove
+Rails/Output:
+  Enabled: false
+
+# TODO: investigate proper upgrade path and remove
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Layout/IndentationConsistency:
+  Enabled: true
