@@ -13,7 +13,7 @@ two:
   price: 9.99
 
 ruby:
-  title: Programming Ruby 3
+  title: Programming in Ruby 3
   description: Ruby is the fastest growing language out there. If you need to get working programms delivered fast, you should add ruby to your toolbox.
   price: 49.50
   image_url: ruby.jpg
